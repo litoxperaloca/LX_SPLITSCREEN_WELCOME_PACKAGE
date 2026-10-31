@@ -1,0 +1,15 @@
+{
+    "UI_LXWP_name": "LX Split-Screen Welcome Package",
+    "UI_LXWP_desc": "Each local character (split-screen included) gets a starter pack once, worn on the back. Pick what goes in it.",
+    "UI_LXWP_enable": "Enable welcome package",
+    "UI_LXWP_enable_tip": "Off = the mod does nothing. Characters who already got their package keep it.",
+    "UI_LXWP_backpack": "Army ALICE pack",
+    "UI_LXWP_backpack_tip": "Off = the gear goes straight into the main inventory, with no backpack.",
+    "UI_LXWP_weapons": "Weapons (shotgun, 4 boxes of shells, machete)",
+    "UI_LXWP_weapons_tip": "Off = no weapons or ammo in the package.",
+    "UI_LXWP_tools": "Tools (hammer, saw, axe, blowtorch, crowbar...)",
+    "UI_LXWP_tools_tip": "Off = no building or breaching tools in the package.",
+    "UI_LXWP_survival": "Survival (full canteen, 4 bandages)",
+    "UI_LXWP_survival_tip": "Off = no water or medical supplies in the package.",
+    "UI_LXWP_halo": "Welcome package received"
+}

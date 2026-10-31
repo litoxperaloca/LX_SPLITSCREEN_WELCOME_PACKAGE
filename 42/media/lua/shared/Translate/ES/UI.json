@@ -1,0 +1,15 @@
+{
+    "UI_LXWP_name": "LX Pantalla dividida: paquete de bienvenida",
+    "UI_LXWP_desc": "Cada personaje local (pantalla dividida incluida) recibe una vez un equipo inicial en la espalda. Elegi que lleva adentro.",
+    "UI_LXWP_enable": "Activar paquete de bienvenida",
+    "UI_LXWP_enable_tip": "Apagado = el mod no hace nada. Los personajes que ya recibieron el paquete lo conservan.",
+    "UI_LXWP_backpack": "Mochila militar ALICE",
+    "UI_LXWP_backpack_tip": "Apagado = el equipo va directo al inventario principal, sin mochila.",
+    "UI_LXWP_weapons": "Armas (escopeta, 4 cajas de cartuchos, machete)",
+    "UI_LXWP_weapons_tip": "Apagado = el paquete no trae armas ni municion.",
+    "UI_LXWP_tools": "Herramientas (martillo, sierra, hacha, soplete, palanqueta...)",
+    "UI_LXWP_tools_tip": "Apagado = el paquete no trae herramientas de construccion ni de entrada forzada.",
+    "UI_LXWP_survival": "Supervivencia (cantimplora llena, 4 vendas)",
+    "UI_LXWP_survival_tip": "Apagado = el paquete no trae agua ni material medico.",
+    "UI_LXWP_halo": "Paquete de bienvenida recibido"
+}
