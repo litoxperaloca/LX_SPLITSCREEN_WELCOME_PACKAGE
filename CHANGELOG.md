@@ -9,7 +9,7 @@ First public release on the Steam Workshop and GitHub.
 ### Changed in this version
 
 - Package contents are now configurable in Options -> MODS (backpack, weapons, tools, survival).
-- All text moved to translation files (EN/ES).
+- All text moved to translation files (EN/ES/RU).
 - Turning the backpack off delivers the gear straight to the main inventory.
 
 ### Included
