@@ -21,6 +21,18 @@ function Get-WorkshopId($path) {
     return ''
 }
 
+# Con el juego abierto, Windows mantiene bloqueados los .jar que ya cargo,
+# y la copia falla a medias. Mejor avisar antes de tocar nada.
+if (Get-Process -Name 'ProjectZomboid*' -ErrorAction SilentlyContinue) {
+    Write-Host ''
+    Write-Host '  OJO: Project Zomboid esta abierto.' -ForegroundColor Yellow
+    Write-Host '  Si este mod trae un .jar, Windows lo tiene bloqueado y la copia va a fallar.'
+    Write-Host '  Cerra el juego y volve a correr esto.'
+    Write-Host ''
+    $r = Read-Host '  Seguir igual? (s/N)'
+    if ($r -notmatch '^[sSyY]') { Write-Host '  Cancelado.'; exit 1 }
+}
+
 Write-Host ''
 Write-Host "  Sincronizando $ModId"
 Write-Host "    desde : $Repo"
