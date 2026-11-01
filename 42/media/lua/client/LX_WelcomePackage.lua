@@ -202,17 +202,27 @@ if PZAPI and PZAPI.ModOptions then
     local tTools = o:addTickBox("TOOLS", getText("UI_LXWP_tools"), true, getText("UI_LXWP_tools_tip"))
     local tSurvival = o:addTickBox("SURVIVAL", getText("UI_LXWP_survival"), true, getText("UI_LXWP_survival_tip"))
 
+    -- Greys the group switches out while the master switch is off.
+    local function setGroupsEnabled(on)
+        for _, t in ipairs({ tBag, tWeapons, tTools, tSurvival }) do
+            if t and t.setEnabled then pcall(t.setEnabled, t, on == true) end
+        end
+    end
+
     o.apply = function(self)
         opt.enabled = tEnabled:getValue() == true
         opt.backpack = tBag:getValue() == true
         opt.weapons = tWeapons:getValue() == true
         opt.tools = tTools:getValue() == true
         opt.survival = tSurvival:getValue() == true
-        for _, t in ipairs({ tBag, tWeapons, tTools, tSurvival }) do
-            if t and t.setEnabled then pcall(t.setEnabled, t, opt.enabled) end
-        end
+        setGroupsEnabled(opt.enabled)
     end
-    tEnabled.onChange = function(self, value) o:apply() end
+
+    -- onChange runs on the click, BEFORE the options screen writes the new value into the
+    -- option (MainOptions does that in its own apply()), so getValue() would still hand back
+    -- the previous one here. Use the value we are given, and only touch the greying: the real
+    -- settings are read in apply(), which PZAPI calls right after committing every value.
+    tEnabled.onChange = function(self, value) setGroupsEnabled(value) end
 
     -- PZAPI does not call apply() on load: force it on menu entry and on game start.
     Events.OnMainMenuEnter.Add(function() o:apply() end)
