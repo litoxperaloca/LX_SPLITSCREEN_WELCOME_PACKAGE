@@ -1,5 +1,5 @@
 version=1
-id=
+id=3831322960
 title=LX Split-Screen Welcome Package
 description=[h1]LX Split-Screen Welcome Package[/h1]
 description=[i]A starter kit for every local character[/i]
