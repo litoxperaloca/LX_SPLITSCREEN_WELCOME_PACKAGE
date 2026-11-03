@@ -69,6 +69,7 @@ description=[*]LX A-Life Split-Screen Fix [B42]
 description=[*]LX Bandits Split-Screen Fix [B42]
 description=[*]LX Split-Screen Skills Boost [B42]
 description=[*]LX Theodore Split-Screen Fix [B42]
+description=[*]LX NPC Bases Split-Screen Fix [B42]
 description=[/list]
 tags=Build 42;Items;Multiplayer;Balance
 visibility=public
