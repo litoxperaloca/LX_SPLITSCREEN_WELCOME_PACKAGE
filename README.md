@@ -80,6 +80,7 @@ If these mods made your co-op run work, you can buy me a coffee — [![ko-fi](ht
 - [LX Theodore Split-Screen Fix](https://github.com/litoxperaloca/LX_TheodoreSplit) — Theodore, the family NPC, reacts to every local player and works with a gamepad.
 - [LX NPC Bases Split-Screen Fix](https://github.com/litoxperaloca/LX_NPCBasesSplit) — Bandit settlements open on your half of the screen, take a gamepad, and keep appearing as you travel.
 - [LX HydeCo Underground Split-Screen Fix](https://github.com/litoxperaloca/LX_HydeCoSplit) — Each player gets their own breathing panel underground, opened and driven by their own gamepad.
+- [LX Heli Pack Split-Screen Fix](https://github.com/litoxperaloca/LX_HeliPackSplit) — Both players can fly the helicopters, each on their own gamepad, with analog stick control.
 
 ---
 
@@ -154,6 +155,7 @@ Si estos mods te arreglaron el coop, podés invitarme un café — [![ko-fi](htt
 - [LX Theodore Split-Screen Fix](https://github.com/litoxperaloca/LX_TheodoreSplit) — Theodore, el NPC familiar, reacciona a todos los jugadores locales y anda con mando.
 - [LX NPC Bases Split-Screen Fix](https://github.com/litoxperaloca/LX_NPCBasesSplit) — Los asentamientos de bandidos se abren en tu mitad de pantalla, andan con mando, y siguen apareciendo mientras viajas.
 - [LX HydeCo Underground Split-Screen Fix](https://github.com/litoxperaloca/LX_HydeCoSplit) — Cada jugador tiene su propio panel de respiracion bajo tierra, abierto y manejado con su propio mando.
+- [LX Heli Pack Split-Screen Fix](https://github.com/litoxperaloca/LX_HeliPackSplit) — Los dos jugadores pueden volar los helicopteros, cada uno con su mando y control analogico.
 
 ---
 
@@ -228,4 +230,5 @@ B42 продолжает улучшать поддержку контролле�
 - [LX Theodore Split-Screen Fix](https://github.com/litoxperaloca/LX_TheodoreSplit) — Theodore реагирует на всех локальных игроков и работает с геймпадом.
 - [LX NPC Bases Split-Screen Fix](https://github.com/litoxperaloca/LX_NPCBasesSplit) — Поселения бандитов открываются на вашей половине экрана, работают с геймпадом и продолжают появляться по мере путешествия.
 - [LX HydeCo Underground Split-Screen Fix](https://github.com/litoxperaloca/LX_HydeCoSplit) — У каждого игрока своя панель дыхания под землёй, открываемая и управляемая своим геймпадом.
+- [LX Heli Pack Split-Screen Fix](https://github.com/litoxperaloca/LX_HeliPackSplit) — Оба игрока могут летать на вертолётах, каждый со своим геймпадом и аналоговым управлением.
 
