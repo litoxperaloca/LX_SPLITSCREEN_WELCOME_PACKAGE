@@ -25,7 +25,19 @@
 local FLAG_V1 = "LX_WelcomePackage_v1"
 local FLAG_V2 = "LX_WelcomePackage_v2"
 local BAG = "Base.Bag_ALICEpack_Army"
-local DELAY_MS = 2000
+-- ESPERA ANTES DE APLICAR.
+-- Antes era un tiempo fijo (2000 ms) puesto por las dudas, sin justificar. Eso
+-- hacia que esto fuera SIEMPRE lo ultimo en aparecer al spawnear, y en la
+-- primera carga mucho peor: el chequeo vive en OnPlayerUpdate, que solo corre
+-- cuando hay un frame, y en la primera carga el framerate esta por el piso
+-- mientras se arman los chunks. O sea que el reloj llegaba, pero el chequeo
+-- esperaba a que hubiera un frame.
+--
+-- Lo que esto necesita de verdad es el inventario del personaje, nada mas.
+-- Asi que se espera a ESO: un piso corto para no pisar la pasada de equipo
+-- inicial del juego, y un techo por si la condicion no llegara nunca.
+local MIN_MS = 400    -- piso: deja terminar el equipo inicial de vanilla
+local MAX_MS = 6000   -- techo: si nunca queda listo, se intenta igual
 
 -- { fullType, count, group }
 local CONTENTS_V1 = {
@@ -170,16 +182,27 @@ local function give(player)
     log(what .. " delivered to player " .. (player:getPlayerNum() + 1))
 end
 
+-- Listo = tiene inventario. Es todo lo que la entrega necesita.
+local function lxReady(player)
+    local ok, inv = pcall(player.getInventory, player)
+    return ok and inv ~= nil
+end
+
 local function onCreatePlayer(playerNum, player)
     if playerNum == nil or playerNum < 0 or playerNum > 3 then return end
-    pending[playerNum] = getTimestampMs() + DELAY_MS
+    local now = getTimestampMs()
+    pending[playerNum] = { from = now + MIN_MS, deadline = now + MAX_MS }
 end
 
 local function onPlayerUpdate(player)
     if not player then return end
     local n = player:getPlayerNum()
-    local due = n and pending[n]
-    if not due or getTimestampMs() < due then return end
+    local w = n and pending[n]
+    if not w then return end
+    local now = getTimestampMs()
+    if now < w.from then return end
+    -- se aplica apenas esta listo; el techo evita esperar para siempre
+    if not lxReady(player) and now < w.deadline then return end
     pending[n] = nil
     if player:isDead() then return end
     local okLocal, isLocal = pcall(player.isLocalPlayer, player)

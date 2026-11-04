@@ -6,7 +6,7 @@
 
 > For couch co-op runs where you want to start playing, not start scavenging.
 
-`Project Zomboid B42.21+` · `v2.1.0` · `CC0`
+`Project Zomboid B42.21+` · `v2.2.0` · `CC0`
 
 [English](#english) · [Español](#español) · [Русский](#русский)
 
